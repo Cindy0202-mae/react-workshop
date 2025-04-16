@@ -8,17 +8,10 @@
 
 import "./Cafe.css";
 
-const Cafe = ({ cafe }) => {
+const Cafe = () => {
   return (
     <div className="cafe-card">
-      <img src={cafe.picture} alt={cafe.title} />
-      <h2>{cafe.title}</h2>
-      <p>{cafe.address}</p>
-      <ul>
-        {cafe.criteria.map((criterion, index) => (
-          <li key={index}>{criterion}</li>
-        ))}
-      </ul>
+
     </div>
   );
 };
