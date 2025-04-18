@@ -74,22 +74,10 @@ const App = () => {
     ]
   );
 
-  const getCafes = () => {
-    console.log("Fetching cafes...");
-    const url = "https://my-unique-rails-cafe-api-16801900c191.herokuapp.com/api/v1/cafes";
-    fetch(url)
-      .then(response => response.json())
-      .then((data) => {
-        // console.log(data);
-        setCafeDatas(data);
-        // cafeDatas = data;
-      });
-  };
-
   return (
     <div className="app-frame">
-      <Navbar />
-      <button onClick={getCafes}>Get all cafes</button>
+      <Navbar setCafeDatas={setCafeDatas} />
+      {/* <button onClick={getCafes}>Get all cafes</button> */}
       <div className="app-body">
         <SideBar />
         <CafeList cafeDatas={cafeDatas}/>
